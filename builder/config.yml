@@ -1,0 +1,18 @@
+---
+default: &default
+  host: www.zamu.in
+  env: {{.GOENV}}
+  db:  "host=/var/run/postgresql dbname=zamu_{{.GOENV}} sslmode=disable"
+  max_db_connections: 10
+  port: ":3000"
+
+development:
+  <<: *default
+  host: localhost:3000
+
+test:
+  <<: *default
+
+production:
+  <<: *default
+  port: ":8080"

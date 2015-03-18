@@ -33,3 +33,8 @@ zamu
   - Should allow use of contact forms
     - With spam prevention
     - Newsletter signups
+
+
+## Packages
+
+  - builder: holds the code to the site builder
