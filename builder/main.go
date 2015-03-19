@@ -20,11 +20,11 @@ var (
 )
 
 func main() {
-	//wireup routes
-	wireupRoutes()
+	//configure routes
+	router := drawRoutes()
 	//start server
 	log.Println("starting server at http://localhost:3000/")
-	log.Fatal(http.ListenAndServe(config.Port, nil))
+	log.Fatal(http.ListenAndServe(config.Port, router))
 }
 
 func init() {
@@ -37,7 +37,4 @@ func init() {
 	log.Printf("loaded config: %+v\n", config)
 
 	//connectDB()
-}
-
-func wireupRoutes() {
 }
